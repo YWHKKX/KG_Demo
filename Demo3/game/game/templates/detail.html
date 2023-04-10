@@ -1,0 +1,311 @@
+<!doctype html>
+
+<!--
+COPYRIGHT by HighHay/Mivfx
+Before using this theme, you should accept themeforest licenses terms.-->
+
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/pageloader.css">
+        <link rel="stylesheet" href="/static/css/stylesheet.css">
+        <link rel="stylesheet" href="/static/css/stylesheet_1.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/1.5.2/css/ionicons.min.css">
+        <link rel="stylesheet" href="/static/css/foundation.min.css">
+        <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
+        <link rel="stylesheet" href="/static/css/vegas.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/main_responsive.css">
+        <link rel="stylesheet" href="/static/css/style-font1.css">
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet" type="text/css">
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/echarts.js"></script>
+		<style type="text/css">
+
+		body{cursor:url(/static/css/dorcandy.cur),default;}
+		a:hover{cursor:url(/static/css/pointer.cur),pointer;}
+		</style>
+    </head>
+
+    <body id="menu" class="alt-bg">
+        <div class="page-loader" id="page-loader">
+            <div><i class="ion ion-loading-d"></i><p>加载中</p></div>
+        </div>
+		<header class="header-top">
+            <div class="menu clearfix">
+                <a href="/"><span style="color:#FFD700;">知识图谱-魔改</span></a>
+				<div class="logo-container">
+					<img class="h-logo" src="/static/images/logo_only.png" alt="Logo" width="150" height="120">
+				</div>
+            </div>
+		</header>
+
+        <div class="page-cover" id="home">
+            <div class="cover-bg pos-abs full-size bg-img" data-image-src="/static/images/00001.jpg"></div>
+
+            <div class="cover-bg pos-abs full-size slide-show">
+				<i class="img" data-src="/static/images/00001.jpg"></i>
+				<i class="img" data-src="/static/images/00002.jpg"></i>
+				<i class="img" data-src="/static/images/00003.jpg"></i>
+				<i class="img" data-src="/static/images/00004.jpg"></i>
+				<i class="img" data-src="/static/images/00005.jpg"></i>
+				<i class="img" data-src="/static/images/00006.jpg"></i>
+				<i class="img" data-src="/static/images/00007.jpg"></i>
+				<i class="img" data-src="/static/images/00008.jpg"></i>
+				<i class="img" data-src="/static/images/00009.jpg"></i>
+				<i class="img" data-src="/static/images/00010.jpg"></i>
+				<i class="img" data-src="/static/images/00011.jpg"></i>
+				<i class="img" data-src="/static/images/00012.jpg"></i>
+				<i class="img" data-src="/static/images/00013.jpg"></i>
+				<i class="img" data-src="/static/images/00014.jpg"></i>
+				<i class="img" data-src="/static/images/00015.jpg"></i>
+				<i class="img" data-src="/static/images/00016.jpg"></i>
+				<i class="img" data-src="/static/images/00017.jpg"></i>
+				<i class="img" data-src="/static/images/00018.jpg"></i>
+				<i class="img" data-src="/static/images/00019.jpg"></i>
+				<i class="img" data-src="/static/images/00020.jpg"></i>
+				<i class="img" data-src="/static/images/00021.jpg"></i>
+				<i class="img" data-src="/static/images/00022.jpg"></i>
+				<i class="img" data-src="/static/images/00023.jpg"></i>
+				<i class="img" data-src="/static/images/00024.jpg"></i>
+				<i class="img" data-src="/static/images/00025.jpg"></i>
+				<i class="img" data-src="/static/images/00026.jpg"></i>
+				<i class="img" data-src="/static/images/00027.jpg"></i>
+                <i class="img" data-src="/static/images/00028.jpg"></i>
+				<i class="img" data-src="/static/images/00029.jpg"></i>
+				<i class="img" data-src="/static/images/00030.jpg"></i>
+				<i class="img" data-src="/static/images/00031.jpg"></i>
+				<i class="img" data-src="/static/images/00032.jpg"></i>
+				<i class="img" data-src="/static/images/00033.jpg"></i>
+				<i class="img" data-src="/static/images/00034.jpg"></i>
+                <i class="img" data-src="/static/images/00035.jpg"></i>
+				<i class="img" data-src="/static/images/00036.jpg"></i>
+				<i class="img" data-src="/static/images/00037.jpg"></i>
+				<i class="img" data-src="/static/images/00038.jpg"></i>
+				<i class="img" data-src="/static/images/00039.jpg"></i>
+				<i class="img" data-src="/static/images/00040.jpg"></i>
+			</div>
+            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(51, 2, 48, 0.12)"></div>
+        </div>
+
+        <main class="page-main" id="mainpage">
+            <div class="section page-find page page-cent" id="s-find">
+                <section class="content">
+                    <div class="site-config" data-date="7/18/2021 00:00:00" data-date-timezone="+0"></div>
+                    {% if entityRelation %}
+                    <div id="main" style="width:700px;height:550px"></div>
+                    <script type="text/javascript">
+                        var entityRelation = [ {{ entityRelation|safe }} ] ;
+                        var data = [] ;
+                        var links = [] ;
+
+                        var anime = {};
+                        var author_link = {}
+                        var author = {};
+                        var classify = {}
+                        var classify_link = {}
+                        var platform = {}
+                        var platform_link = {}
+                        var seiyuu = {}
+                        var seiyuu_link = {}
+                        var role = {}
+                        var role_link = {}
+
+                        console.log(entityRelation)
+
+                        if(entityRelation[0][0].length!=0){
+                            if(entityRelation[0][1].length!=0) {
+                                author = {};
+                                author['name'] = entityRelation[0][1][0]['a']['名称'];
+                                author['category'] = 2;
+                                author['symbolSize'] = 80;
+                                data.push(author);
+                            }
+                            for (var i = 0; i < entityRelation[0][0].length; i++) {
+                                anime = {};
+                                author_link = {}
+                                anime['name'] = entityRelation[0][0][i]['a']['名称'];
+                                anime['category'] = 0;
+                                anime['symbolSize'] = 60;
+                                author_link['name'] = "作者";
+                                author_link['target'] = author['name'];
+                                author_link['source'] = anime['name'];
+                                data.push(anime);
+                                links.push(author_link)
+                            }
+                        }
+
+                        if(entityRelation[0][2].length!=0) {
+                            for (var i = 0; i < entityRelation[0][2].length; i++) {
+                                classify = {}
+                                classify_link = {}
+                                classify['name'] = entityRelation[0][2][i]['a']['类型'];
+                                classify['category'] = 1;
+                                classify['symbolSize'] = 50;
+                                classify_link['name'] = "类型";
+                                classify_link['target'] = classify['name'];
+                                classify_link['source'] = anime['name'];
+                                data.push(classify);
+                                links.push(classify_link);
+                            }
+                        }
+
+                        if(entityRelation[0][3].length!=0) {
+                            platform = {}
+                            platform_link = {}
+                            platform['name'] = entityRelation[0][3][0]['a']['名称'];
+                            platform['category'] = 3;
+                            platform['symbolSize'] = 60;
+                            platform_link['name'] = "播放";
+                            platform_link['target'] = platform['name'];
+                            platform_link['source'] = anime['name'];
+                            data.push(platform);
+                            links.push(platform_link)
+                        }
+
+                        if(entityRelation[0][4].length!=0) {
+                            if(entityRelation[0][5].length!=0){
+                                seiyuu['name'] = entityRelation[0][5][0]['a']['名称'];
+                                seiyuu['category'] = 5;
+                                seiyuu['symbolSize'] = 60;
+                                data.push(seiyuu);
+                            }
+                            for (var i = 0; i < entityRelation[0][4].length; i++) {
+                                role = {}
+                                role_link = {}
+                                seiyuu_link = {}
+                                role['name'] = entityRelation[0][4][i]['a']['名称'];
+                                role['category'] = 4;
+                                role['symbolSize'] = 60;
+                                role_link['name'] = "属于";
+                                role_link['target'] = anime['name'];
+                                role_link['source'] = role['name'];
+                                seiyuu_link['name'] = "配音";
+                                seiyuu_link['target'] = role['name'];
+                                seiyuu_link['source'] = seiyuu['name'];
+                                data.push(role);
+                                links.push(seiyuu_link)
+                                links.push(role_link)
+                            }
+                        }
+
+                        var myChart = echarts.init(document.getElementById('main'));
+                        var categories = [
+                            {
+                                name: '番剧'
+                            }, {
+                                name: '类型'
+                            }, {
+                                name: '作者'
+                            }, {
+                                name: '平台'
+                            }, {
+                                name: '角色'
+                            }, {
+                                name: '声优'
+                            },
+                        ];
+
+                        option = {
+                            title: {
+                                text: 'ECharts 关系图'
+                            },
+                            tooltip: {
+                                formatter: function (x) {
+                                    return x.data.des;
+                                }
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    mark: {
+                                        show: true
+                                    },
+                                    restore: {
+                                        show: true
+                                    },
+                                    saveAsImage: {
+                                        show: true
+                                    }
+                                }
+                            },
+                            legend: [{
+                                data: categories.map(function (a) {
+                                    return a.name;
+                                })
+                            }],
+                            series: [{
+                                type: 'graph',
+                                layout: 'force',
+                                symbolSize: 40,
+                                roam: true,
+                                edgeSymbol: ['circle', 'arrow'],
+                                edgeSymbolSize: [2, 10],
+                                edgeLabel: {
+                                    normal: {
+                                        textStyle: {
+                                            fontSize: 20
+                                        }
+                                    }
+                                },
+                                force: {
+                                    repulsion: 2500,
+                                    edgeLength: [10, 50]
+                                },
+                                draggable: true,
+                                lineStyle: {
+                                    normal: {
+                                        width: 2,
+                                        color: '#4b565b',
+                                    }
+                                },
+                                edgeLabel: {
+                                    normal: {
+                                        show: true,
+                                        formatter: function (x) {
+                                            return x.data.name;
+                                        }
+                                    }
+                                },
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        textStyle: {}
+                                    }
+                                },
+                                data: data,
+                                links: links,
+                                categories: categories,
+                            }]
+                        };
+                        myChart.setOption(option);
+                    </script>
+                    {% else %}
+                    <textarea style="background-color:rgba(0,0,0,0.6); font:26px 宋体; color:white;" cols="30" style="region:none" rows="18" style="region:none" >数据库中暂未添加该实体</textarea>
+                    {% endif %}
+                    <form method = "get" id = 'searchEntityForm'>
+                        <div class="input-group">
+                            <select type="text" id = "user_sel" name = "user_sel" style="width:200px;">
+                                <option class="form-control">查询番剧</option>
+                                <option class="form-control">查询角色</option>
+                                <option class="form-control">查询公司</option>
+                                <option class="form-control">查询声优</option>
+                            </select>
+                            <input type="text" id = "user_text" name = "user_text" class="form-control" placeholder="请输入名称" aria-describedby="basic-addon1">
+                            <span class="btn btn-primary input-group-addon" type="button" id="relationSearchButton" style="background-color:#4592fe ; padding:6px 38px" onclick="document.getElementById('searchEntityForm').submit();">查询</span>
+                        </div>
+                    </form>
+				</section>
+            </div>
+        </main>
+
+        <script src="/static/js/jquery-1.11.2.min.js"></script>
+        <script src="/static/js/all.js"></script>
+        <script src="/static/js/jquery.downCount.js"></script>
+        <script src="/static/js/form_script.js"></script>
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>

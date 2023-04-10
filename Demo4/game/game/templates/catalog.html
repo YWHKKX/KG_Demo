@@ -1,0 +1,123 @@
+<!doctype html>
+
+<!--
+COPYRIGHT by HighHay/Mivfx
+Before using this theme, you should accept themeforest licenses terms.-->
+
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/pageloader.css">
+        <link rel="stylesheet" href="/static/css/stylesheet.css">
+        <link rel="stylesheet" href="/static/css/stylesheet_1.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/1.5.2/css/ionicons.min.css">
+        <link rel="stylesheet" href="/static/css/foundation.min.css">
+        <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
+        <link rel="stylesheet" href="/static/css/vegas.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/main_responsive.css">
+        <link rel="stylesheet" href="/static/css/style-font1.css">
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet" type="text/css">
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/echarts.js"></script>
+		<style type="text/css">
+
+		body{cursor:url(/static/css/dorcandy.cur),default;}
+		a:hover{cursor:url(/static/css/pointer.cur),pointer;}
+		</style>
+    </head>
+
+    <body id="menu" class="alt-bg">
+        <div class="page-loader" id="page-loader">
+            <div><i class="ion ion-loading-d"></i><p>加载中</p></div>
+        </div>
+		<header class="header-top">
+            <div class="menu clearfix">
+                <a href="/"><span style="color:#FFD700;">知识图谱-魔改</span></a>
+				<div class="logo-container">
+					<img class="h-logo" src="/static/images/logo_only.png" alt="Logo" width="150" height="120">
+				</div>
+            </div>
+		</header>
+
+        <div class="page-cover" id="home">
+            <div class="cover-bg pos-abs full-size bg-img" data-image-src="/static/images/00001.jpg"></div>
+
+            <div class="cover-bg pos-abs full-size slide-show">
+				<i class="img" data-src="/static/images/00001.jpg"></i>
+				<i class="img" data-src="/static/images/00002.jpg"></i>
+				<i class="img" data-src="/static/images/00003.jpg"></i>
+				<i class="img" data-src="/static/images/00004.jpg"></i>
+				<i class="img" data-src="/static/images/00005.jpg"></i>
+				<i class="img" data-src="/static/images/00006.jpg"></i>
+				<i class="img" data-src="/static/images/00007.jpg"></i>
+				<i class="img" data-src="/static/images/00008.jpg"></i>
+				<i class="img" data-src="/static/images/00009.jpg"></i>
+				<i class="img" data-src="/static/images/00010.jpg"></i>
+				<i class="img" data-src="/static/images/00011.jpg"></i>
+				<i class="img" data-src="/static/images/00012.jpg"></i>
+				<i class="img" data-src="/static/images/00013.jpg"></i>
+				<i class="img" data-src="/static/images/00014.jpg"></i>
+				<i class="img" data-src="/static/images/00015.jpg"></i>
+				<i class="img" data-src="/static/images/00016.jpg"></i>
+				<i class="img" data-src="/static/images/00017.jpg"></i>
+				<i class="img" data-src="/static/images/00018.jpg"></i>
+				<i class="img" data-src="/static/images/00019.jpg"></i>
+				<i class="img" data-src="/static/images/00020.jpg"></i>
+				<i class="img" data-src="/static/images/00021.jpg"></i>
+				<i class="img" data-src="/static/images/00022.jpg"></i>
+				<i class="img" data-src="/static/images/00023.jpg"></i>
+				<i class="img" data-src="/static/images/00024.jpg"></i>
+				<i class="img" data-src="/static/images/00025.jpg"></i>
+				<i class="img" data-src="/static/images/00026.jpg"></i>
+				<i class="img" data-src="/static/images/00027.jpg"></i>
+                <i class="img" data-src="/static/images/00028.jpg"></i>
+				<i class="img" data-src="/static/images/00029.jpg"></i>
+				<i class="img" data-src="/static/images/00030.jpg"></i>
+				<i class="img" data-src="/static/images/00031.jpg"></i>
+				<i class="img" data-src="/static/images/00032.jpg"></i>
+				<i class="img" data-src="/static/images/00033.jpg"></i>
+				<i class="img" data-src="/static/images/00034.jpg"></i>
+                <i class="img" data-src="/static/images/00035.jpg"></i>
+				<i class="img" data-src="/static/images/00036.jpg"></i>
+				<i class="img" data-src="/static/images/00037.jpg"></i>
+				<i class="img" data-src="/static/images/00038.jpg"></i>
+				<i class="img" data-src="/static/images/00039.jpg"></i>
+				<i class="img" data-src="/static/images/00040.jpg"></i>
+			</div>
+            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(51, 2, 48, 0.12)"></div>
+        </div>
+
+        <main class="page-main" id="mainpage">
+            <div class="section page-find page page-cent" id="s-find">
+                <section class="content">
+                    <div class="site-config" data-date="7/18/2021 00:00:00" data-date-timezone="+0"></div>
+                    <form method = "get" id = 'searchEntityForm'>
+                        {% if ctx %}
+                            <script type="text/javascript">
+                                var ctx = [ {{ ctx|safe }} ] ;
+                                console.log(ctx)
+                                for (var i = 0; i < ctx[0].length; i++) {
+                                    document.writeln("<a href='/context?user_text=" + ctx[0][i]['n.名称'] + "'>" + ctx[0][i]['n.名称'] + "</a>")
+                                }
+                            </script>
+                        {% else %}
+                            <div class="input-group">
+                                <a>数据库异常</a>
+                            </div>
+                        {% endif %}
+                    </form>
+				</section>
+            </div>
+        </main>
+
+        <script src="/static/js/jquery-1.11.2.min.js"></script>
+        <script src="/static/js/all.js"></script>
+        <script src="/static/js/jquery.downCount.js"></script>
+        <script src="/static/js/form_script.js"></script>
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>
